@@ -10,7 +10,7 @@ output:
     social: ["twitter", "facebook", "menu"]
     name: 'IPMA'
     source_code: embed
-runtime: shiny
+#runtime: shiny
 ---
 
 ```{r setup, include=FALSE}

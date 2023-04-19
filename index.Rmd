@@ -251,11 +251,7 @@ renderValueBox({
 })
 ```
 
-### Apagar
 
-```{r}
-renderText(input$Region_2)
-```
 
 Column
 -----------------------------------------------------------------------
@@ -327,7 +323,7 @@ numericInput('logbeta',
             value = 0)
 ```
 
-```{r, eval = F}
+```{r, eval = T}
 timeC = effort_ns$year_sale %>% as.character %>% as.numeric()
 timeI = effort_ns$year_sale %>% as.character %>% as.numeric()
 obsC = effort_ns$catch
@@ -354,13 +350,13 @@ Row
 
 ### Diagnostics
 
-```{r, eval = F}
+```{r, eval = T}
 plotspict.diagnostic(calc.osa.resid(res_spict))
 ```
 
 ### Biomass
 
-```{r, eval = F}
+```{r, eval = T}
 plotspict.biomass(res_spict)
 ```
 
@@ -370,7 +366,7 @@ Row
 
 ### Painel
 
-```{r, eval = F}
+```{r, eval = T}
 par(mfrow = c(2,2))
 plotspict.bbmsy(res_spict)
 plotspict.ffmsy(res_spict)
@@ -381,7 +377,7 @@ plotspict.production(res_spict, n.plotyears = 40)
 
 ### Retro
 
-```{r, eval = F}
+```{r, eval = T}
 plotspict.retro(retro_res)
 ```
 

@@ -37,6 +37,7 @@ library(forecast)
 library(astsa)
 
 # usado para spict
+library(TMB)
 library(spict)
 ```
 
@@ -305,7 +306,7 @@ Column {.sidebar}
 -----------------------------------------------------------------------
 
 ```{r}
-selectInput('Region',
+selectInput('Region3',
             label = 'Region',
             choices = c('Western Coast', 'Southern Coast'),
             selected = 'Southern Coast')
@@ -323,7 +324,7 @@ numericInput('logbeta',
             value = 0)
 ```
 
-```{r, eval = T}
+```{r, eval = F}
 timeC = effort_ns$year_sale %>% as.character %>% as.numeric()
 timeI = effort_ns$year_sale %>% as.character %>% as.numeric()
 obsC = effort_ns$catch
@@ -350,13 +351,13 @@ Row
 
 ### Diagnostics
 
-```{r, eval = T}
+```{r, eval = F}
 plotspict.diagnostic(calc.osa.resid(res_spict))
 ```
 
 ### Biomass
 
-```{r, eval = T}
+```{r, eval = F}
 plotspict.biomass(res_spict)
 ```
 
@@ -366,7 +367,7 @@ Row
 
 ### Painel
 
-```{r, eval = T}
+```{r, eval = F}
 par(mfrow = c(2,2))
 plotspict.bbmsy(res_spict)
 plotspict.ffmsy(res_spict)
@@ -377,7 +378,7 @@ plotspict.production(res_spict, n.plotyears = 40)
 
 ### Retro
 
-```{r, eval = T}
+```{r, eval = F}
 plotspict.retro(retro_res)
 ```
 
